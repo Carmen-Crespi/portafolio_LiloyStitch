@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lilo & Stitch | Personajes</title>
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Luckiest+Guy&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <span class="header-text-title">Lilo y Stitch</span>
+        </div>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">INICIO</a></li> 
+                <li><a href="personajes.html">PERSONAJES</a></li>
+                <li><a href="curiosidades.html">CURIOSIDADES</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="personajes" class="section-characters container">
+            <h2>Nuestra Ohana</h2>
+            <p class="section-subtitle">Conoce a los miembros de esta extraña y maravillosa familia.</p>
+
+            <div class="character-gallery">
+                
+                <div class="character-card" onclick="toggleDescription(this)">
+                    <img src="./assets/stitch.jpg" alt="Stitch">
+                    <h3>Stitch (Experimento 626)</h3>
+                    <div class="character-description">
+                        <h3>Stitch</h3>
+                        <p>Creado para causar el caos, este alienígena azul encuentra su propósito en la Tierra como parte de la Ohana de Lilo.</p>
+                    </div>
+                </div>
+
+                <div class="character-card" onclick="toggleDescription(this)">
+                    <img src="./assets/lilo.jpg" alt="Lilo Pelekai">
+                    <h3>Lilo</h3>
+                    <div class="character-description">
+                        <h3>Lilo</h3>
+                        <p>Una niña solitaria y excéntrica que introduce a Stitch al concepto de Ohana, enseñándole el verdadero significado de la familia.</p>
+                    </div>
+                </div>
+                
+                <div class="character-card" onclick="toggleDescription(this)">
+                    <img src="./assets/nani.png" alt="Nani Pelekai">
+                    <h3>Nani</h3>
+                    <div class="character-description">
+                        <h3>Nani</h3>
+                        <p>La hermana mayor de Lilo, que lucha por criarla y mantener a su familia unida después de la pérdida de sus padres.</p>
+                    </div>
+                </div>
+                
+                <div class="character-card" onclick="toggleDescription(this)">
+                    <img src="./assets/jumba.jpg" alt="Dr. Jumba Jookiba">
+                    <h3>Dr. Jumba Jookiba</h3>
+                    <div class="character-description">
+                        <h3>Jumba</h3>
+                        <p>El "genio malvado" creador de Stitch. Inicialmente un antagonista, se convierte en un miembro protector y excéntrico de la Ohana.</p>
+                    </div>
+                </div>
+                
+                <div class="character-card" onclick="toggleDescription(this)">
+                    <img src="./assets/teniente.jpg" alt="Agente Pleakley">
+                    <h3>Agente Pleakley</h3>
+                    <div class="character-description">
+                        <h3>Pleakley</h3>
+                        <p>Experto en la Tierra y compañero de Jumba. A menudo se disfraza y es la voz de la razón (y el pánico) del dúo.</p>
+                    </div>
+                </div>
+                
+                <div class="character-card" onclick="toggleDescription(this)">
+                    <img src="./assets/gantu.jpg" alt="Capitán Gantu">
+                    <h3>Capitán Gantu</h3>
+                    <div class="character-description">
+                        <h3>Gantu</h3>
+                        <p>El corpulento capitán de la Federación Galáctica enviado para capturar a Stitch, un personaje serio y frustrado.</p>
+                    </div>
+                </div>
+                
+                <div class="character-card" onclick="toggleDescription(this)">
+                    <img src="./assets/cobra.jpg" alt="Cobra Bubbles">
+                    <h3>Cobra Bubbles</h3>
+                    <div class="character-description">
+                        <h3>Cobra Bubbles</h3>
+                        <p>Un ex agente de la CIA (o eso parece) que ahora trabaja como trabajador social, vigilando la situación de Nani y Lilo.</p>
+                    </div>
+                </div>
+                
+                <div class="character-card" onclick="toggleDescription(this)">
+                    <img src="./assets/granconcejal.jpg" alt="Gran Concejal">
+                    <h3>Gran Concejal</h3>
+                    <div class="character-description">
+                        <h3>Gran Concejal</h3>
+                        <p>Líder de la Federación Galáctica. Su principal preocupación es mantener la paz y deshacerse del problema de Stitch.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+    </main>
+    
+    <script>
+        function toggleDescription(card) {
+            const description = card.querySelector('.character-description');
+            description.classList.toggle('show');
+        }
+    </script>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>Hecho con el espíritu Ohana por Carmen Rosa. 🌺 &copy; 2025</p>
+        </div>
+    </footer>
+
+</body>
+</html>

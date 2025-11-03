@@ -1,0 +1,223 @@
+
+
+/* variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+:root {
+    --color-acento: #00BFFF; /* */
+    --color-background-general: #FDF9F3; 
+    --color-text-dark: #222222; 
+    --color-text-light: white;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif; 
+    background-color: var(--color-background-general); 
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    padding-top: 60px; 
+}
+
+/* navegacion */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Luckiest+Guy&family=Poppins:wght@400;700&display=swap');
+
+.main-header {
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    background-color: var(--color-acento); 
+    padding: 10px 30px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* titulo lilo y stitch */
+.header-text-title {
+    font-family: 'Luckiest Guy', cursive; 
+    font-size: 2.2em; 
+    color: var(--color-text-dark); 
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); 
+    line-height: 1; 
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+}
+
+/* menu-cursiva*/
+.main-nav ul li a {
+    color: var(--color-text-dark); 
+    text-decoration: none;
+    font-family: 'Pacifico', cursive;
+    font-weight: 400; 
+    letter-spacing: 1.5px;
+    padding: 8px 15px; 
+    display: block; 
+    transition: transform 0.3s ease-out, background-color 0.3s;
+    border-radius: 5px;
+}
+
+.main-nav ul li a:hover {
+    transform: scale(1.1); 
+    background-color: rgba(255, 255, 255, 0.4); 
+    color: var(--color-text-dark); 
+}
+
+/* seccion viideo  */
+.hero-section {
+    position: relative; 
+    min-height: calc(100vh - 60px); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; 
+    overflow: hidden; 
+}
+
+.hero-video-full {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transform: translate(-50%, -50%);
+    z-index: 1; 
+}
+
+.hero-content-overlay {
+    position: relative; 
+    z-index: 5; 
+    width: 100%;
+    height: 100%;
+    background-color: transparent; 
+}
+
+/* titulos secciones */
+section {
+    padding: 80px 30px;
+    text-align: center;
+}
+
+section h2 {
+    font-family: 'Pacifico', cursive; 
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: var(--color-text-dark); 
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.section-subtitle {
+    margin-bottom: 50px; 
+    font-style: italic;
+    color: var(--color-text-dark);
+}
+
+/* seccion personajes,g */
+.section-characters {
+    background-image: url('../assets/fondo1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    padding-top: 50px; 
+}
+
+.character-gallery {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 40px;
+}
+.character-card {
+    background-color: rgba(253, 249, 243, 0); padding: 20px; border-radius: 5px; box-shadow: none; 
+    width: 250px; transition: transform 0.3s ease-in-out, box-shadow 0.3s; border: none; 
+    display: flex; flex-direction: column; align-items: center; overflow: hidden; cursor: pointer; 
+    position: relative; min-height: 350px; 
+}
+.character-card:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(0, 191, 255, 0.5); }
+.character-card img {
+    width: 180px; height: 180px; object-fit: cover; border-radius: 0; border: 5px solid white; margin-bottom: 15px;
+}
+.character-description {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 191, 255, 0.95); 
+    color: var(--color-text-light); padding: 20px; display: flex; align-items: center; justify-content: center; 
+    text-align: center; opacity: 0; transform: translateY(100%); transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    border-radius: 5px; box-sizing: border-box; flex-direction: column;
+}
+.character-description.show { opacity: 1; transform: translateY(0); }
+
+
+/* seccion curiosidades*/
+.section-curiosities {
+    background-image: url('../assets/fondojpg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    padding-top: 50px; 
+}
+
+.trivia-list {
+    margin-top: 50px;
+    display: flex; 
+    flex-direction: column; 
+    gap: 30px; 
+    max-width: 900px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding: 0 20px; 
+}
+
+.trivia-item {
+    background-color: rgba(255, 255, 255, 0.556); 
+    padding: 20px;
+    border-left: 5px solid var(--color-acento); 
+    border-radius: 8px; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+    display: flex; 
+    align-items: center; 
+    gap: 25px; 
+    text-align: left; 
+}
+
+.trivia-item:nth-child(even) {
+    flex-direction: row-reverse; 
+    border-left: none; 
+    border-right: 5px solid var(--color-acento); 
+}
+
+.trivia-item img {
+    width: 180px; 
+    height: 120px; 
+    object-fit: cover; 
+    border-radius: 6px; 
+    border: none; 
+    flex-shrink: 0; 
+}
+
+.trivia-item p strong {
+    color: var(--color-acento);
+    display: block; 
+    margin-bottom: 8px; 
+    font-size: 1.1em;
+}
+
+/* footer  */
+.main-footer {
+    background-color: var(--color-acento);
+    color: var(--color-text-light);
+    padding: 25px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
